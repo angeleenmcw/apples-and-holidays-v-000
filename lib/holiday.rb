@@ -5,7 +5,7 @@ def second_supply_for_fourth_of_july(holiday_hash)
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
-holiday_hash[:winter][:memorial_day] << supply
+  holiday_hash[:spring][:memorial_day] << supply
 end
 
 
@@ -38,7 +38,11 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
    holiday_hash.each do |season, holidays|
      holidays.each do |supply, holiday|
-     if supply.include? ="BBQ"
-    bbq << holiday
+     if supply.include?('BBQ')
+       bbq << holiday
+       end
+    end
   end
+end
+bbq
 end
